@@ -44,7 +44,6 @@ a:focus {
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -73,10 +72,9 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(2rem, 5vw, 3rem);
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--border);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(2rem, 6vw, 4rem);
+  padding: 3.5rem 0;
 }
 
 .hero-copy h1 {
@@ -101,28 +99,18 @@ main {
 
 .hero-visual {
   margin: 0;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.25rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  justify-content: center;
+  padding: 0;
 }
 
 .hero-visual img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-}
-
-.hero-visual figcaption {
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  max-width: 640px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
 
 .vision {
@@ -141,15 +129,15 @@ main {
 }
 
 .vision-grid article {
-  border: 1px solid var(--border);
   background: var(--panel);
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 16px;
-  transition: border-color 0.3s ease;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
 }
 
 .vision-grid article:hover {
-  border-color: var(--accent);
+  transform: translateY(-6px);
 }
 
 .vision-grid h3 {
@@ -180,20 +168,19 @@ main {
 .timeline {
   display: grid;
   gap: 2rem;
-  border-left: 2px solid var(--border);
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 .timeline article {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .timeline article::before {
   content: "";
   position: absolute;
-  left: -2.4rem;
-  top: 0.5rem;
+  left: -1.2rem;
+  top: 0.4rem;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -225,11 +212,11 @@ main {
 }
 
 .contact-card {
-  border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.75rem;
+  padding: 1.9rem;
   background: var(--panel);
   margin-bottom: 1.5rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
 .contact-card h2 {
@@ -264,7 +251,6 @@ code {
   }
 
   .timeline {
-    border-left: none;
     padding-left: 0;
   }
 
