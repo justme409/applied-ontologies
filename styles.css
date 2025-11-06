@@ -1,0 +1,274 @@
+:root {
+  --bg: #050505;
+  --panel: #0f0f0f;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #32ff7e;
+  --accent-soft: rgba(50, 255, 126, 0.12);
+  --border: rgba(148, 163, 184, 0.16);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-header,
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.logotype {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(2rem, 5vw, 3rem);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.hero-copy p {
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+}
+
+.hero-copy ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.hero-copy li {
+  margin-bottom: 0.75rem;
+}
+
+.hero-visual {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.hero-visual figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vision {
+  padding: 3rem 0 0;
+}
+
+.vision h2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.vision-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.vision-grid article {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.vision-grid article:hover {
+  border-color: var(--accent);
+}
+
+.vision-grid h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.vision-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.page h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 2rem;
+}
+
+.page.narrow {
+  max-width: 720px;
+}
+
+.timeline {
+  display: grid;
+  gap: 2rem;
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+}
+
+.timeline article {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline article::before {
+  content: "";
+  position: absolute;
+  left: -2.4rem;
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.timeline time {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.timeline h2 {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.note {
+  margin-top: 3rem;
+  color: var(--muted);
+}
+
+.contact-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  background: var(--panel);
+  margin-bottom: 1.5rem;
+}
+
+.contact-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  font-size: 1.2rem;
+}
+
+code {
+  font-family: inherit;
+  background: var(--accent-soft);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  .site-footer,
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-header,
+  .site-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .timeline article::before {
+    left: -9999px;
+  }
+}
