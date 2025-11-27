@@ -72,8 +72,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: minmax(320px, 0.85fr) minmax(320px, 1.35fr);
+  gap: clamp(1rem, 3vw, 3rem);
   padding: 0 0 0.25rem;
   align-items: center;
 }
@@ -100,7 +100,7 @@ main {
 
 
 .hero-copy {
-  max-width: 560px;
+  max-width: 500px;
 }
 
 .hero-visual {
@@ -112,8 +112,8 @@ main {
 }
 
 .hero-visual img {
-  width: min(200%, 1040px);
-  max-width: none;
+  width: min(85vw, 720px);
+  max-width: 720px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
