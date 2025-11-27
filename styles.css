@@ -63,11 +63,11 @@ main {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
   padding: 1rem 0 0.25rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .hero-copy h1 {
@@ -92,7 +92,7 @@ main {
 
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 560px;
 }
 
 .hero-visual {
@@ -104,9 +104,9 @@ main {
 }
 
 .hero-visual img {
-  width: clamp(320px, 55vw, 580px);
+  width: 100%;
+  max-width: 520px;
   height: auto;
-  max-width: none;
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
@@ -251,11 +251,7 @@ code {
     left: -9999px;
   }
 
-  .hero-visual {
-    justify-content: center;
-  }
-
   .hero-visual img {
-    width: min(85vw, 420px);
+    max-width: 420px;
   }
 }
