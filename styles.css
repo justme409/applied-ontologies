@@ -44,6 +44,13 @@ a:focus {
   justify-content: flex-start;
 }
 
+.site-header {
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  padding-bottom: 0.25rem;
+}
+
 .site-footer {
   font-size: 0.75rem;
   color: var(--muted);
@@ -54,6 +61,7 @@ a:focus {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 main {
@@ -66,7 +74,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
-  padding: 1rem 0 0.25rem;
+  padding: 0 0 0.25rem;
   align-items: center;
 }
 
