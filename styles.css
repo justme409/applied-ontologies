@@ -3,8 +3,8 @@
   --panel: #0f0f0f;
   --text: #f1f5f9;
   --muted: #94a3b8;
-  --accent: #32ff7e;
-  --accent-soft: rgba(50, 255, 126, 0.12);
+  --accent: #5ad1ff;
+  --accent-soft: rgba(90, 209, 255, 0.18);
   --border: rgba(148, 163, 184, 0.16);
   color-scheme: dark;
 }
@@ -35,12 +35,12 @@ a:focus {
 
 .site-header,
 .site-footer {
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .site-footer {
@@ -49,19 +49,10 @@ a:focus {
 }
 
 .logotype {
+  font-size: clamp(2.8rem, 6vw, 3.4rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.site-nav a {
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
 }
 
 main {
@@ -72,14 +63,14 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: clamp(1.5rem, 5vw, 3rem);
   padding: 3rem 0;
   align-items: center;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
@@ -103,14 +94,14 @@ main {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0;
 }
 
 .hero-visual img {
-  width: 100%;
+  width: 140%;
   height: auto;
-  max-width: 720px;
+  max-width: none;
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
 }
@@ -253,5 +244,9 @@ code {
 
   .timeline article::before {
     left: -9999px;
+  }
+
+  .hero-visual img {
+    width: 100%;
   }
 }
