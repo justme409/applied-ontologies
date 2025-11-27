@@ -104,8 +104,8 @@ main {
 }
 
 .hero-visual img {
-  width: 100%;
-  max-width: 520px;
+  width: min(200%, 1040px);
+  max-width: none;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
@@ -252,6 +252,7 @@ code {
   }
 
   .hero-visual img {
-    max-width: 420px;
+    width: min(95vw, 520px);
+    max-width: none;
   }
 }
