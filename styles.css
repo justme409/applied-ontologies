@@ -20,8 +20,8 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 a {
@@ -38,7 +38,7 @@ a:focus {
 .site-footer {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -50,7 +50,7 @@ a:focus {
 }
 
 .logotype {
-  font-size: clamp(2.2rem, 4vw, 2.6rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.3rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -59,30 +59,30 @@ a:focus {
 main {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 0 1.5rem 1rem;
+  padding: 0 1.5rem 0.75rem;
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: clamp(0.25rem, 1vw, 0.75rem);
-  padding: 1rem 0 0.5rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0 0.25rem;
+  align-items: flex-start;
 }
 
 .hero-copy h1 {
-  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  margin-bottom: 1.25rem;
 }
 
 .hero-copy p {
-  margin-bottom: 1.25rem;
-  color: var(--muted);
+  margin-bottom: 1rem;
+  color: var(--text);
 }
 
 .hero-copy ul {
   padding-left: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text);
 }
 
@@ -91,16 +91,20 @@ main {
 }
 
 
+.hero-copy {
+  max-width: 760px;
+}
+
 .hero-visual {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .hero-visual img {
-  width: 140%;
+  width: clamp(320px, 55vw, 580px);
   height: auto;
   max-width: none;
   border-radius: 20px;
@@ -247,7 +251,11 @@ code {
     left: -9999px;
   }
 
+  .hero-visual {
+    justify-content: center;
+  }
+
   .hero-visual img {
-    width: 100%;
+    width: min(85vw, 420px);
   }
 }
